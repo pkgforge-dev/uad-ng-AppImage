@@ -17,7 +17,11 @@ export DEPLOY_VULKAN=1 # seems to need both opengl and vulkan
 # ADD LIBRARIES
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
-./quick-sharun /usr/bin/uad-ng /usr/bin/adb
+./quick-sharun \
+	/usr/bin/uad-ng              \
+	/usr/bin/adb                 \
+	/usr/lib/libwayland-egl.so*  \
+	/usr/lib/libwayland-client.so*
 
 # Add udev rules
 mkdir -p ./AppDir/etc/udev/rules.d
