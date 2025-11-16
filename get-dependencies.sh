@@ -13,6 +13,7 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 echo "Getting '$BINARY'..."
+echo "---------------------------------------------------------------"
 if ! wget --retry-connrefused --tries=30 "$BINARY" -O /usr/bin/uad-ng 2>/tmp/download.log; then
 	cat /tmp/download.log
 	exit 1
