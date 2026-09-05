@@ -7,7 +7,7 @@ UDEV="https://raw.githubusercontent.com/M0Rf30/android-udev-rules/refs/heads/mai
 VERSION="$(cat ~/version)"
 export ARCH VERSION
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook:udev-installer.hook"
+export ADD_HOOKS="self-updater.hook:udev-installer.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export DEPLOY_OPENGL=1
 export DEPLOY_VULKAN=1 # seems to need both opengl and vulkan
